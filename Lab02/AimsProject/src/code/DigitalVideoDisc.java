@@ -25,6 +25,14 @@ public class DigitalVideoDisc {
         this.cost = cost;
     }
 
+    public DigitalVideoDisc(String title, String category, float cost) {
+        nbDigitalVideoDisc++;
+        id = nbDigitalVideoDisc;
+        this.title = title;
+        this.category = category;
+        this.cost = cost;
+    }
+
     public DigitalVideoDisc(String title) {
         nbDigitalVideoDisc++;
         id = nbDigitalVideoDisc;
@@ -33,7 +41,11 @@ public class DigitalVideoDisc {
 
     @Override
     public String toString() {
-        return String.format("DVD - %s - %s - %s - %d: %.2f $", title, category, director, length, cost);
+        return String.format("%d. DVD - %s - %s - %s - %d: %.2f $", id, title, category, director, length, cost);
+    }
+
+    public boolean isMatch(String title) {
+        return this.title.equals(title);
     }
 
     public String getTitle() {
@@ -74,5 +86,9 @@ public class DigitalVideoDisc {
 
     public void setCost(float cost) {
         this.cost = cost;
+    }
+
+    public int getId() {
+        return id;
     }
 }
