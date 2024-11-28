@@ -1,6 +1,9 @@
 package code;
 
 public class DigitalVideoDisc {
+    private static int nbDigitalVideoDisc = 0;
+
+    private int id;
     private String title;
     private String category;
     private String director;
@@ -8,9 +11,13 @@ public class DigitalVideoDisc {
     private float cost;
 
     public DigitalVideoDisc() {
+        nbDigitalVideoDisc++;
+        id = nbDigitalVideoDisc;
     }
 
     public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
+        nbDigitalVideoDisc++;
+        id = nbDigitalVideoDisc;
         this.title = title;
         this.category = category;
         this.director = director;
@@ -19,6 +26,8 @@ public class DigitalVideoDisc {
     }
 
     public DigitalVideoDisc(String title) {
+        nbDigitalVideoDisc++;
+        id = nbDigitalVideoDisc;
         this.title = title;
     }
 
