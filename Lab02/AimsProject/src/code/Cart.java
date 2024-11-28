@@ -27,6 +27,17 @@ public class Cart {
         }
     }
 
+    public void addDigitalVideoDisc(DigitalVideoDisc[] dvdList) {
+        for(DigitalVideoDisc dvd:dvdList) {
+            addDigitalVideoDisc(dvd);
+        }
+    }
+
+    public void addDigitalVideoDisc(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
+        DigitalVideoDisc[] dvdList = {dvd1, dvd2};
+        addDigitalVideoDisc(dvdList);
+    }
+
     public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
         if(itemsOdered.contains(disc)) {
             itemsOdered.remove(disc);
