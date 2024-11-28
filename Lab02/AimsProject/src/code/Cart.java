@@ -44,4 +44,13 @@ public class Cart {
         }
         return totalCost;
     }
+
+    public void printCart() {
+        System.out.println("*".repeat(23) + "CART" + "*".repeat(23));
+        System.out.println("Ordered Items:");
+        for(int i = 0; i < qtyOrdered; i++) {
+            System.out.println((i + 1) + ". " + itemsOdered.get(i).toString());
+        }
+        System.out.println("*".repeat(51));
+    }
 }
