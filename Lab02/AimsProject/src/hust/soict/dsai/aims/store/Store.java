@@ -1,4 +1,4 @@
-package code;
+package hust.soict.dsai.aims.store;
 
 import java.util.ArrayList;
 
