@@ -67,18 +67,32 @@ public class Cart {
     }
 
     public void searchID(int id) {
+        int count = 0;
         for(int i = 0; i < qtyOrdered; i++) {
             if(itemsOdered.get(i).getId() == id) {
                 System.out.println(itemsOdered.get(i).toString());
+                count++;
             }
+        }
+        if (count == 0) {
+            System.out.println("Not fought");
+        } else {
+            System.out.println("Total fought: " + count);
         }
     }
 
     public void searchTitle(String title) {
+        int count = 0;
         for(DigitalVideoDisc dvd:itemsOdered) {
             if(dvd.isMatch(title)) {
                 System.out.println(dvd.toString());
+                count++;
             }
+        }
+        if (count == 0) {
+            System.out.println("Not fought");
+        } else {
+            System.out.println("Total fought: " + count);
         }
     }
 
