@@ -1,7 +1,7 @@
 package hust.soict.dsai.aims;
 
 import hust.soict.dsai.aims.cart.Cart;
-import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+import hust.soict.dsai.aims.media.DigitalVideoDisc;
 
 public class Aims {
     public static void main(String[] args) {
@@ -12,15 +12,14 @@ public class Aims {
         DigitalVideoDisc dvd4 = new DigitalVideoDisc("afsdfs", "adsfa", "adfsdfsdf", 89, 4.78f);
         DigitalVideoDisc dvd5 = new DigitalVideoDisc("afsdfs", "adsfa", "adfsdfsdf", 89, 5.78f);
         DigitalVideoDisc dvd6 = new DigitalVideoDisc("afsdfs", "adsfa", "adfsdfsdf", 89, 2.78f);
-        anOrder.addDigitalVideoDisc(dvd1);
-        anOrder.addDigitalVideoDisc(dvd2);
-        anOrder.addDigitalVideoDisc(dvd3);
-        anOrder.addDigitalVideoDisc(dvd4);
-        anOrder.addDigitalVideoDisc(dvd5);
-        anOrder.addDigitalVideoDisc(dvd6);
-        anOrder.removeDigitalVideoDisc(dvd6);
+        anOrder.addMedia(dvd1);
+        anOrder.addMedia(dvd2);
+        anOrder.addMedia(dvd3);
+        anOrder.addMedia(dvd4);
+        anOrder.addMedia(dvd5);
+        anOrder.addMedia(dvd6);
+        anOrder.removeMedia(dvd6);
         System.out.println(anOrder.totalCost());
-        System.out.println(anOrder.getQtyOrdered());
     }
 
 
